@@ -2,7 +2,7 @@ library("data.table")
 
 setwd("/Users/lucasecarpio/Projects/R/samples/ExData_Plotting1")
 
-#Reads in data and subsets for specified dates
+#Reads in data and subsets for dates
 DT <- data.table::fread(input = "household_power_consumption.txt", na.strings="?")
 
 #Prints readable data
@@ -17,6 +17,6 @@ DT <- DT[(dateTime >= "2007-02-01") & (dateTime < "2007-02-03")]
 png("plot2.png", width=480, height=480)
 
 ## plot2
-plot(x = powerDT[, dateTime], y = powerDT[, Global_active_power], type="l", xlab="", ylab="Global Active Power (kilowatts)")
+plot(x = DT[, dateTime], y = DT[, Global_active_power], type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 dev.off()

@@ -2,7 +2,7 @@ library("data.table")
 
 setwd("/Users/lucasecarpio/Projects/R/samples/ExData_Plotting1")
 
-#Reads in data and subsets for specified dates
+#Reads in data and subsets for dates
 DT <- data.table::fread(input = "household_power_consumption.txt", na.strings="?")
 
 # Prints readable data
